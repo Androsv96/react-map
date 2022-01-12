@@ -1,6 +1,3 @@
-
-
-
 export { BtnMyLocation } from './BtnMyLocation';
 export { Loading } from './Loading';
 export { LoadingPlaces } from './LoadingPlaces';
