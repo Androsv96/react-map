@@ -1,12 +1,26 @@
-import { BtnMyLocation, MapView, ReactLogo, SearchBar } from '../components'
+import { useContext } from 'react';
+import { PlacesContext } from '../context';
+import {
+  BtnMyLocation,
+  Loading,
+  MapView,
+  ReactLogo,
+  SearchBar,
+} from '../components';
 
 export const HomeScreen = () => {
-    return (
-        <div>
-            <MapView />
-            <BtnMyLocation />
-            <ReactLogo />
-            <SearchBar />
-        </div>
-    )
-}
+  const { isLoading } = useContext(PlacesContext);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  return (
+    <div>
+      <MapView />
+      <BtnMyLocation />
+      <ReactLogo />
+      <SearchBar />
+    </div>
+  );
+};

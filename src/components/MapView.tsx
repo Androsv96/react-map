@@ -6,7 +6,6 @@ import { useContext, useLayoutEffect, useRef } from 'react';
 import { Map } from '!mapbox-gl';
 
 import { PlacesContext, MapContext } from '../context';
-import { Loading } from './';
 
 export const MapView = () => {
   const { isLoading, userLocation } = useContext(PlacesContext);
@@ -26,10 +25,6 @@ export const MapView = () => {
       setMap(map);
     }
   }, [isLoading]);
-
-  if (isLoading) {
-    return <Loading />;
-  }
 
   return (
     <div

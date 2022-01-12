@@ -7,7 +7,7 @@ import { MapsApp } from './MapsApp';
 //@ts-ignore
 import mapboxgl from '!mapbox-gl';
 
-mapboxgl.accessToken = 'token';
+mapboxgl.accessToken = 'tokenHere';
 
 if (!navigator.geolocation) {
   alert('Your browser doesnt support gelocation');
